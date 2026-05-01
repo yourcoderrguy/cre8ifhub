@@ -62,14 +62,15 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
+       {/* Copyright */}
         <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-slate-500">
             &copy; {currentYear} Cre8ifhub. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-slate-500">
-            <Link href="#" className="hover:text-slate-300">Privacy Policy</Link>
-            <Link href="#" className="hover:text-slate-300">Terms of Service</Link>
+            {/* UPDATED LINKS HERE */}
+            <Link href="/privacy" className="hover:text-slate-300">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-slate-300">Terms of Service</Link>
           </div>
         </div>
       </div>
