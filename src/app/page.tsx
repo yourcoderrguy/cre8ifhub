@@ -33,7 +33,7 @@ export default function Home() {
     <div className="w-full flex flex-col items-center bg-white">
       
       {/* 2-COLUMN HERO SECTION WITH IMAGE */}
-      <section className="relative w-full max-w-7xl mx-auto px-6 pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
+      <section className="relative w-full max-w-7xl mx-auto px-6 pt-32 pb-20 md:pt-32 md:pb-32 overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           <motion.div
@@ -86,14 +86,14 @@ export default function Home() {
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-teal-500/20 to-yellow-500/20 rounded-[3rem] blur-3xl transform -rotate-6"></div>
             {/* MAKE SURE TO ADD 'hero.jpg' to your public folder */}
-            <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+            <div className="relative w-full h-full rounded-[1.5rem] overflow-hidden shadow-2xl border-4 border-white">
               <div className="absolute inset-0 bg-slate-200 flex flex-col items-center justify-center text-slate-400">
                  {/* Replace this div with the Image component below once you have hero.jpg */}
                  <MonitorSmartphone size={64} className="mb-4 opacity-50" />
                  <p className="font-bold">Main Dashboard / Work Image</p>
                  <p className="text-sm">(Save image as /public/hero.jpg)</p>
               </div>
-              {/* <Image src="/hero.jpg" alt="Digital Platform Development" fill className="object-cover" /> */}
+              <Image src="/hero.webp" alt="Digital Platform Development" fill className="object-cover" />
             </div>
           </motion.div>
         </div>
@@ -115,7 +115,7 @@ export default function Home() {
                  <p className="text-sm">(Save image as /public/workspace.jpg)</p>
             </div>
             {/* UNCOMMENT THIS WHEN READY: */}
-            {/* <Image src="/workspace.jpg" alt="Cre8ifhub Team Training" fill className="object-cover" /> */}
+            <Image src="/workspace.jpg" alt="Cre8ifhub Team Training" fill className="object-cover" />
             
             {/* Floating Experience Badge */}
             <div className="absolute bottom-6 -right-6 md:right-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-4 hidden sm:flex">
@@ -180,7 +180,7 @@ export default function Home() {
 
       {/* PREMIUM CALL TO ACTION */}
       <section className="w-full max-w-7xl mx-auto px-6 pb-24">
-        <div className="bg-slate-900 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
+        <div className="bg-slate-900 rounded-[2rem] p-12 md:p-20 text-center relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('/grid.svg')] opacity-10 pointer-events-none"></div>
           <div className="relative z-10">
             <h2 className="text-4xl md:text-5xl font-black text-white mb-6">Ready to scale your vision?</h2>

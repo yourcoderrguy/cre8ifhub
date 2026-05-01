@@ -24,7 +24,7 @@ export default function Services() {
       icon: <MonitorSmartphone className="w-8 h-8 text-yellow-500" />,
       color: "bg-yellow-50",
       imagePlaceholder: "Sharetribe Interface Image",
-      imageName: "sharetribe.jpg",
+      imageName: "sharetribe.webp",
       tags: ["Rapid Deployment", "API Integration", "UI Customization"],
     },
     {
@@ -51,7 +51,7 @@ export default function Services() {
     <div className="w-full flex flex-col items-center bg-white pb-24 overflow-hidden">
       
       {/* ULTRA-PREMIUM SERVICES HERO */}
-      <section className="relative w-full max-w-7xl mx-auto px-6 pt-32 pb-24 md:pt-48 md:pb-32 text-center">
+      <section className="relative w-full max-w-7xl mx-auto px-6 pt-32 pb-24 md:pt-32 md:pb-32 text-center">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[400px] bg-gradient-to-br from-teal-500/10 via-yellow-500/5 to-pink-500/10 blur-[100px] rounded-full pointer-events-none -z-10" />
         
         <motion.div
@@ -98,14 +98,14 @@ export default function Services() {
                 
                 {/* Image Side */}
                 <div className="w-full lg:w-1/2">
-                  <div className="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100 group">
+                  <div className="relative w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden shadow-2xl border border-slate-100 group">
                     <div className="absolute inset-0 bg-slate-100 flex flex-col items-center justify-center text-slate-400 group-hover:scale-105 transition-transform duration-700 p-6 text-center">
                       <p className="font-bold text-lg md:text-xl">{service.imagePlaceholder}</p>
                       <p className="text-xs md:text-sm mt-2">(Save image as /public/{service.imageName})</p>
                     </div>
-                    {/* <Image src={`/${service.imageName}`} alt={service.title} fill className="object-cover group-hover:scale-105 transition-transform duration-700" /> */}
+                    <Image src={`/${service.imageName}`} alt={service.title} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                     
-                    <div className="absolute top-4 left-4 md:top-6 md:left-6 bg-white/90 backdrop-blur-md p-3 md:p-4 rounded-2xl shadow-lg border border-white/20">
+                    <div className="absolute top-4 left-4 md:top-6 md:left-6 bg-white/90 backdrop-blur-md p-3 md:p-4 rounded-xl shadow-lg border border-white/20">
                       {service.icon}
                     </div>
                   </div>
@@ -153,7 +153,7 @@ export default function Services() {
 
       {/* BOTTOM CTA SECTION */}
       <section className="w-full max-w-7xl mx-auto px-6 mt-32">
-        <div className="bg-slate-900 rounded-[3rem] p-8 md:p-20 text-center relative overflow-hidden">
+        <div className="bg-slate-900 rounded-[2rem] p-8 md:p-20 text-center relative overflow-hidden">
           <div className="absolute top-0 right-0 w-full h-full bg-[url('/grid.svg')] opacity-10 pointer-events-none"></div>
           
           <motion.div 
