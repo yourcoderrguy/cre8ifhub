@@ -2,7 +2,9 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar"; // <-- Add this import
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import WhatsAppButton from "@/components/ui/WhatsAppButton"; // <-- Import the new button
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -18,12 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${outfit.className} bg-brand-dark text-slate-300 antialiased selection:bg-brand-yellow selection:text-brand-dark flex flex-col min-h-screen overflow-x-hidden`}>
-        <Navbar /> {/* <-- Add the Navbar here */}
-        <main className="flex-grow pt-24"> {/* Added padding-top to account for fixed navbar */}
+      <body className={`${outfit.className} bg-white text-slate-900 antialiased selection:bg-teal-500 selection:text-white flex flex-col min-h-screen overflow-x-hidden`}>
+        <Navbar />
+        <main className="flex-grow pt-24">
           {children}
         </main>
-        {/* <Footer /> will go here later */}
+        <Footer />
+        <WhatsAppButton /> {/* <-- Mount the button right above the closing body tag */}
       </body>
     </html>
   );

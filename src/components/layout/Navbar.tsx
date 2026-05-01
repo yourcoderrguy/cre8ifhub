@@ -71,22 +71,22 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* Desktop Navigation - Premium Light Text */}
+         {/* Desktop Navigation - FIXED VISIBILITY */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-slate-300 hover:text-white transition-colors relative group"
+                className="text-sm font-bold text-slate-900 hover:text-teal-500 transition-colors relative group"
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-brand-cyan via-brand-yellow to-brand-pink transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-500 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
             
             <Link
               href="/contact"
-              className="px-6 py-2.5 rounded-full bg-white/5 border border-white/10 text-white text-sm font-medium hover:bg-brand-cyan hover:text-brand-dark hover:border-brand-cyan transition-all duration-300"
+              className="px-6 py-2.5 rounded-full bg-slate-900 text-white text-sm font-bold hover:bg-teal-500 hover:text-slate-900 transition-all duration-300 shadow-md"
             >
               Get a Proposal
             </Link>
