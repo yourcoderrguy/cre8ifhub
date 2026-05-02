@@ -33,8 +33,9 @@ export default function Home() {
     <div className="w-full flex flex-col items-center bg-white">
       
       {/* 2-COLUMN HERO SECTION WITH IMAGE */}
-      <section className="relative w-full max-w-7xl mx-auto px-6 pt-16 pb-20 md:pt-16 md:pb-32 overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      {/* FIXED: Added pt-32 and lg:pt-40 to clear any fixed navigation headers */}
+      <section className="relative w-full max-w-7xl mx-auto px-6 pt-16 pb-16 lg:pt-16 lg:pb-20 lg:min-h-[90vh] flex flex-col justify-center overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -42,35 +43,34 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="relative z-10"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-50 border border-slate-200 shadow-sm mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-slate-50 border border-slate-200 shadow-sm mb-4 sm:mb-6">
               <span className="flex h-2 w-2 rounded-full bg-teal-500 animate-pulse"></span>
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-700">Enterprise Digital Infrastructure</span>
+              <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-700">Enterprise Digital Infrastructure</span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-slate-900 mb-6 leading-[1.1]">
-              Engineering Scalable <br />
-              {/* FIXED INVISIBLE TEXT: Using standard Tailwind colors to ensure it renders */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tighter text-slate-900 mb-4 sm:mb-6 leading-[1.1]">
+              Engineering Scalable <br className="hidden sm:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 via-yellow-500 to-pink-500">
                 Marketplaces
-              </span> <br />
+              </span> <br className="hidden sm:block" />
               for Ambitious Brands.
             </h1>
             
-            <p className="text-lg text-slate-600 mb-8 leading-relaxed font-medium max-w-xl">
+            <p className="text-base sm:text-lg text-slate-600 mb-6 sm:mb-8 leading-relaxed font-medium max-w-xl">
               We transform complex ideas into seamless, high-performance web experiences. From bespoke multivendor ecosystems to rapid Sharetribe deployments, we build the infrastructure startups need to scale.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
               <Link 
                 href="/contact" 
-                className="w-full sm:w-auto group flex items-center justify-center gap-2 bg-slate-900 hover:bg-black text-white px-8 py-4 rounded-full font-bold transition-all duration-300 shadow-xl hover:-translate-y-1"
+                className="w-full sm:w-auto group flex items-center justify-center gap-2 bg-slate-900 hover:bg-black text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold text-sm sm:text-base transition-all duration-300 shadow-xl hover:-translate-y-1"
               >
                 Talk to an Expert
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
                 href="/contact" 
-                className="w-full sm:w-auto px-8 py-4 rounded-full font-bold text-slate-700 bg-white border-2 border-slate-200 hover:border-slate-300 transition-all duration-300"
+                className="w-full sm:w-auto flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold text-sm sm:text-base text-slate-700 bg-white border-2 border-slate-200 hover:border-slate-300 transition-all duration-300"
               >
                 Get in Touch
               </Link>
@@ -82,16 +82,14 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative lg:h-[600px] w-full hidden md:block"
+            className="relative h-[350px] sm:h-[400px] lg:h-[450px] xl:h-[550px] w-full hidden md:block"
           >
-            <div className="absolute inset-0 bg-gradient-to-tr from-teal-500/20 to-yellow-500/20 rounded-[3rem] blur-3xl transform -rotate-6"></div>
-            {/* MAKE SURE TO ADD 'hero.jpg' to your public folder */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-teal-500/20 to-yellow-500/20 rounded-[2rem] lg:rounded-[3rem] blur-3xl transform -rotate-6"></div>
             <div className="relative w-full h-full rounded-[1.5rem] overflow-hidden shadow-2xl border-4 border-white">
-              <div className="absolute inset-0 bg-slate-200 flex flex-col items-center justify-center text-slate-400">
-                 {/* Replace this div with the Image component below once you have hero.jpg */}
-                 <MonitorSmartphone size={64} className="mb-4 opacity-50" />
-                 <p className="font-bold">Main Dashboard / Work Image</p>
-                 <p className="text-sm">(Save image as /public/hero.jpg)</p>
+              <div className="absolute inset-0 bg-slate-200 flex flex-col items-center justify-center text-slate-400 p-4 text-center">
+                 <MonitorSmartphone size={48} className="mb-4 opacity-50 sm:w-16 sm:h-16" />
+                 <p className="font-bold text-sm sm:text-base">Main Dashboard / Work Image</p>
+                 <p className="text-xs sm:text-sm">(Save image as /public/hero.jpg)</p>
               </div>
               <Image src="/hero.webp" alt="Digital Platform Development" fill className="object-cover" />
             </div>
@@ -100,31 +98,30 @@ export default function Home() {
       </section>
 
       {/* WORKSPACE & ABOUT SECTION - 2 COLUMN */}
-      <section className="w-full bg-slate-50 py-24 border-y border-slate-200">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section className="w-full bg-slate-50 py-16 lg:py-24 border-y border-slate-200">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
-          {/* WORKSPACE IMAGE (Where they train people) */}
+          {/* WORKSPACE IMAGE */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative w-full aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-xl"
+            className="relative w-full aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-xl order-2 lg:order-1"
           >
-            <div className="absolute inset-0 bg-slate-200 flex flex-col items-center justify-center text-slate-400">
-                 <p className="font-bold">Workspace / Training Image</p>
-                 <p className="text-sm">(Save image as /public/workspace.jpg)</p>
+            <div className="absolute inset-0 bg-slate-200 flex flex-col items-center justify-center text-slate-400 p-4 text-center">
+                 <p className="font-bold text-sm sm:text-base">Workspace / Training Image</p>
+                 <p className="text-xs sm:text-sm">(Save image as /public/workspace.jpg)</p>
             </div>
-            {/* UNCOMMENT THIS WHEN READY: */}
             <Image src="/workspace.jpg" alt="Cre8ifhub Team Training" fill className="object-cover" />
             
             {/* Floating Experience Badge */}
-            <div className="absolute bottom-6 -right-6 md:right-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-4 hidden sm:flex">
-               <div className="w-12 h-12 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center font-black text-xl">
+            <div className="absolute bottom-4 -right-4 sm:bottom-6 sm:right-6 bg-white p-4 sm:p-6 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 sm:gap-4 hidden sm:flex">
+               <div className="w-10 h-10 sm:w-12 sm:h-12 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center font-black text-lg sm:text-xl">
                  5+
                </div>
                <div>
-                 <p className="text-sm text-slate-500 font-bold uppercase">Years of</p>
-                 <p className="text-lg font-black text-slate-900">Expertise</p>
+                 <p className="text-xs sm:text-sm text-slate-500 font-bold uppercase">Years of</p>
+                 <p className="text-base sm:text-lg font-black text-slate-900">Expertise</p>
                </div>
             </div>
           </motion.div>
@@ -133,16 +130,17 @@ export default function Home() {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            className="order-1 lg:order-2"
           >
-            <h2 className="text-teal-500 font-bold uppercase tracking-widest mb-4">Architecting Growth</h2>
-            <h3 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">We don't just build websites; we architect digital growth engines.</h3>
-            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+            <h2 className="text-teal-500 font-bold uppercase tracking-widest mb-3 sm:mb-4 text-sm sm:text-base">Architecting Growth</h2>
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 mb-4 sm:mb-6 leading-tight">We don't just build websites; we architect digital growth engines.</h3>
+            <p className="text-base sm:text-lg text-slate-600 mb-6 sm:mb-8 leading-relaxed">
               At Cre8ifhub, we partner with forward-thinking business owners, entrepreneurs, and startups to design intuitive, secure, and conversion-driven platforms. Whether you need a robust 2-sided marketplace or a sleek corporate presence, our team ensures your technology works as brilliantly as your business model.
             </p>
-            <ul className="space-y-4">
+            <ul className="space-y-3 sm:space-y-4">
               {['Secure & Scalable Infrastructure', 'Custom 2-Sided Marketplaces', 'Dedicated Training & Support'].map((item, i) => (
-                <li key={i} className="flex items-center gap-3 text-slate-700 font-bold">
-                  <CheckCircle2 className="text-teal-500 w-6 h-6" />
+                <li key={i} className="flex items-center gap-3 text-slate-700 font-bold text-sm sm:text-base">
+                  <CheckCircle2 className="text-teal-500 w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
                   {item}
                 </li>
               ))}
@@ -152,13 +150,13 @@ export default function Home() {
       </section>
 
       {/* WHY CHOOSE US GRID */}
-      <section className="w-full max-w-7xl mx-auto px-6 py-24">
-        <div className="text-center mb-16 max-w-2xl mx-auto">
-          <h2 className="text-2xl md:text-5xl font-black text-slate-900 mb-4">The Technical Edge.</h2>
-          <p className="text-xl text-slate-600 font-medium">Why industry leaders choose Cre8ifhub for their most critical digital infrastructure.</p>
+      <section className="w-full max-w-7xl mx-auto px-6 py-16 lg:py-24">
+        <div className="text-center mb-12 sm:mb-16 max-w-2xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 mb-3 sm:mb-4">The Technical Edge.</h2>
+          <p className="text-lg sm:text-xl text-slate-600 font-medium">Why industry leaders choose Cre8ifhub for their most critical digital infrastructure.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {whyChooseUs.map((feature, index) => (
             <motion.div
               key={index}
@@ -166,12 +164,12 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300"
+              className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center mb-6 border border-slate-100">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-slate-50 flex items-center justify-center mb-5 sm:mb-6 border border-slate-100">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3">{feature.title}</h3>
               <p className="text-slate-600 leading-relaxed text-sm">{feature.description}</p>
             </motion.div>
           ))}
@@ -179,17 +177,17 @@ export default function Home() {
       </section>
 
       {/* PREMIUM CALL TO ACTION */}
-      <section className="w-full max-w-7xl mx-auto px-6 pb-24">
-        <div className="bg-slate-900 rounded-[2rem] p-12 md:p-20 text-center relative overflow-hidden">
+      <section className="w-full max-w-7xl mx-auto px-6 pb-16 lg:pb-24">
+        <div className="bg-slate-900 rounded-[2rem] p-8 sm:p-12 md:p-20 text-center relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('/grid.svg')] opacity-10 pointer-events-none"></div>
           <div className="relative z-10">
-            <h2 className="text-2xl md:text-5xl font-black text-white mb-6">Ready to scale your vision?</h2>
-            <p className="text-slate-400 text-lg mb-10 max-w-2xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4 sm:mb-6">Ready to scale your vision?</h2>
+            <p className="text-slate-400 text-base sm:text-lg mb-8 sm:mb-10 max-w-2xl mx-auto">
               From user onboarding to complex transaction flows, we handle the heavy lifting of custom multivendor development.
             </p>
             <Link 
               href="/contact" 
-              className="inline-block bg-teal-500 hover:bg-teal-400 text-slate-900 px-10 py-5 rounded-full font-black text-sm transition-all duration-300 shadow-lg hover:shadow-teal-500/25 hover:-translate-y-1"
+              className="inline-block w-full sm:w-auto bg-teal-500 hover:bg-teal-400 text-slate-900 px-6 py-4 sm:px-10 sm:py-5 rounded-full font-black text-sm sm:text-base transition-all duration-300 shadow-lg hover:shadow-teal-500/25 hover:-translate-y-1"
             >
               Start Your Project Today
             </Link>
