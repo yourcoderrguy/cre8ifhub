@@ -9,7 +9,7 @@ export default function TermsOfService() {
 
   return (
     <div className="w-full bg-[#fafafa] min-h-screen pt-24 sm:pt-32 pb-16 sm:pb-24">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <div className="max-w-4xl mx-auto px-5 sm:px-6">
         
         <Link href="/" className="inline-flex items-center gap-2 text-teal-600 font-bold hover:text-slate-900 transition-colors mb-8 sm:mb-12 text-sm sm:text-base">
           <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -21,7 +21,7 @@ export default function TermsOfService() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 mb-2 sm:mb-4 tracking-tight">Terms of Service</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 mb-3 sm:mb-4 tracking-tight">Terms of Service</h1>
           <p className="text-xs sm:text-sm text-slate-500 mb-8 sm:mb-12">Last Updated: {lastUpdated}</p>
 
           <div className="bg-white p-6 sm:p-8 md:p-12 rounded-3xl sm:rounded-[2rem] shadow-sm border border-slate-200 text-slate-600 leading-relaxed space-y-8 sm:space-y-10">
