@@ -154,7 +154,7 @@ export default function Home() {
       {/* WHY CHOOSE US GRID */}
       <section className="w-full max-w-7xl mx-auto px-6 py-24">
         <div className="text-center mb-16 max-w-2xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4">The Technical Edge.</h2>
+          <h2 className="text-2xl md:text-5xl font-black text-slate-900 mb-4">The Technical Edge.</h2>
           <p className="text-xl text-slate-600 font-medium">Why industry leaders choose Cre8ifhub for their most critical digital infrastructure.</p>
         </div>
 
@@ -183,13 +183,13 @@ export default function Home() {
         <div className="bg-slate-900 rounded-[2rem] p-12 md:p-20 text-center relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('/grid.svg')] opacity-10 pointer-events-none"></div>
           <div className="relative z-10">
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-6">Ready to scale your vision?</h2>
+            <h2 className="text-2xl md:text-5xl font-black text-white mb-6">Ready to scale your vision?</h2>
             <p className="text-slate-400 text-lg mb-10 max-w-2xl mx-auto">
               From user onboarding to complex transaction flows, we handle the heavy lifting of custom multivendor development.
             </p>
             <Link 
               href="/contact" 
-              className="inline-block bg-teal-500 hover:bg-teal-400 text-slate-900 px-10 py-5 rounded-full font-black text-lg transition-all duration-300 shadow-lg hover:shadow-teal-500/25 hover:-translate-y-1"
+              className="inline-block bg-teal-500 hover:bg-teal-400 text-slate-900 px-10 py-5 rounded-full font-black text-sm transition-all duration-300 shadow-lg hover:shadow-teal-500/25 hover:-translate-y-1"
             >
               Start Your Project Today
             </Link>
