@@ -51,7 +51,7 @@ export default function Services() {
     <div className="w-full flex flex-col items-center bg-white pb-24 overflow-hidden">
       
       {/* ULTRA-PREMIUM SERVICES HERO */}
-      <section className="relative w-full max-w-7xl mx-auto px-6 pt-32 pb-24 md:pt-32 md:pb-32 text-center">
+      <section className="relative w-full max-w-7xl mx-auto px-6 pt-16 pb-24 md:pt-16 md:pb-32 text-center">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[400px] bg-gradient-to-br from-teal-500/10 via-yellow-500/5 to-pink-500/10 blur-[100px] rounded-full pointer-events-none -z-10" />
         
         <motion.div

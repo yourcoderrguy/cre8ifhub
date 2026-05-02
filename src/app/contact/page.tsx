@@ -35,7 +35,7 @@ export default function Contact() {
   ];
 
   return (
-    <div className="w-full bg-[#fafafa] min-h-screen pt-32 pb-24 relative overflow-hidden">
+    <div className="w-full bg-[#fafafa] min-h-screen pt-16 pb-24 relative overflow-hidden">
       
       {/* Background Ambient Glow */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-teal-500/10 via-yellow-500/5 to-transparent blur-[120px] rounded-full pointer-events-none -z-10" />

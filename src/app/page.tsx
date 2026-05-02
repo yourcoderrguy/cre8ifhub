@@ -33,7 +33,7 @@ export default function Home() {
     <div className="w-full flex flex-col items-center bg-white">
       
       {/* 2-COLUMN HERO SECTION WITH IMAGE */}
-      <section className="relative w-full max-w-7xl mx-auto px-6 pt-32 pb-20 md:pt-32 md:pb-32 overflow-hidden">
+      <section className="relative w-full max-w-7xl mx-auto px-6 pt-16 pb-20 md:pt-16 md:pb-32 overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           <motion.div
