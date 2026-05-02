@@ -26,9 +26,11 @@ export default function Navbar() {
     }
   }, [mobileMenuOpen]);
 
-  const navLinks = [
+const navLinks = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
+    { name: "Our Work", href: "/work" }, // <-- Added Work
+    { name: "Team", href: "/team" },     // <-- Added Team
     { name: "Contact", href: "/contact" },
   ];
 
