@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image"; // Uncomment when images are added
+import Image from "next/image"; 
 import { ArrowUpRight, CheckCircle2, ArrowRight } from "lucide-react";
 
 export default function Work() {
@@ -13,7 +13,6 @@ export default function Work() {
       title: "From Limitation to a Scalable Marketplace Engine.",
       description: "Miventy started as a promising idea: connect parents with children’s entertainers. But the initial build on Sharetribe Go hit predictable ceilings. We migrated the marketplace to Sharetribe Flex, redesigned the UX from the ground up, and rebuilt the transaction system to support real marketplace economics. Stripe-powered split payments, commission logic, and dynamic user roles transformed how users interacted—buyers could become vendors fluidly.",
       tags: ["Sharetribe Flex", "Stripe Split Payments", "Role Management"],
-      imagePlaceholder: "Miventy Platform UI",
       imageName: "miventry.png",
       color: "from-teal-500/20 to-slate-900/5"
     },
@@ -23,7 +22,6 @@ export default function Work() {
       title: "Designing a Multi-Sided Marketplace from Scratch.",
       description: "Shindeeg needed to support three distinct user journeys—event planners, DJs, and attendees—without friction. Using Next.js, we engineered a custom platform from first principles. Planners monetize events, DJs sell services, and attendees buy tickets. With Stripe handling transactions and Mapbox enabling location discovery, it evolved into a unified ecosystem. This wasn’t just development—it was product design at the system level.",
       tags: ["Next.js Custom Build", "Mapbox Integration", "Multi-sided Routing"],
-      imagePlaceholder: "Shindeeg Event Dashboard",
       imageName: "shindeeg.png",
       color: "from-yellow-500/20 to-slate-900/5"
     },
@@ -33,7 +31,6 @@ export default function Work() {
       title: "Turning a Niche Idea into an Intelligent Marketplace.",
       description: "Wedly began as a no-code MVP in the wedding DIY space—functional, but limited. To unlock its potential, we transitioned it to Sharetribe Flex and rebuilt the experience around discovery. We introduced custom conversion pages, Stripe infrastructure, and AI-driven search powered by Claude. The result is a marketplace that doesn’t just list options—it helps users find exactly what they need based on intent.",
       tags: ["Claude AI Search", "Sharetribe Flex", "CRO Design"],
-      imagePlaceholder: "Wedly Search Interface",
       imageName: "wedly.png",
       color: "from-pink-500/20 to-slate-900/5"
     }
@@ -139,7 +136,7 @@ export default function Work() {
                     {project.description}
                   </p>
 
-                  {/* Tags (Replaced Metrics to fit the new copy) */}
+                  {/* Tags */}
                   <div className="flex flex-wrap gap-2 sm:gap-3 mb-8 sm:mb-10">
                     {project.tags.map((tag, i) => (
                       <span key={i} className="px-3 py-1.5 sm:px-4 sm:py-2 bg-slate-50 border border-slate-200 rounded-full text-xs sm:text-sm font-bold text-slate-700">
@@ -154,13 +151,15 @@ export default function Work() {
                   </Link>
                 </div>
 
-                {/* Image Side - Stays on top on mobile (order-1) */}
-                <div className={`relative h-[250px] sm:h-[350px] md:h-[450px] lg:h-auto bg-gradient-to-br ${project.color} overflow-hidden flex items-center justify-center order-1 ${isEven ? 'lg:order-2 lg:border-l' : 'lg:order-1 lg:border-r'} border-b lg:border-b-0 border-slate-100`}>
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-600 z-10 bg-white/50 backdrop-blur-sm group-hover:opacity-0 transition-opacity duration-500 p-6 text-center">
-                    <p className="font-bold text-base sm:text-lg">{project.imagePlaceholder}</p>
-                    {/* <p className="text-xs sm:text-sm mt-1">(Save as /public/{project.imageName})</p> */}
-                  </div>
-                  <Image src={`/${project.imageName}`} alt={project.client} fill className="object-cover group-hover:scale-105 transition-transform duration-700 object-top" />
+                {/* Image Side - BLUR OVERLAY COMPLETELY REMOVED */}
+                <div className={`relative h-[250px] sm:h-[350px] md:h-[450px] lg:h-auto bg-slate-100 overflow-hidden flex items-center justify-center order-1 ${isEven ? 'lg:order-2 lg:border-l' : 'lg:order-1 lg:border-r'} border-b lg:border-b-0 border-slate-100`}>
+                  <Image 
+                    src={`/${project.imageName}`} 
+                    alt={project.client} 
+                    fill 
+                    className="object-cover group-hover:scale-105 transition-transform duration-700 object-top" 
+                    priority={index === 0} // Loads the first image instantly for better performance
+                  />
                 </div>
 
               </motion.div>
@@ -211,7 +210,7 @@ export default function Work() {
           {gridProjects.map((project, index) => (
             <div key={index} className="bg-white rounded-2xl sm:rounded-[2rem] border border-slate-200 overflow-hidden hover:shadow-xl transition-shadow group">
               <div className="h-40 sm:h-48 bg-slate-100 relative flex items-center justify-center border-b border-slate-200">
-                <span className="text-slate-400 font-bold text-xs sm:text-sm z-10 px-4 text-center">Save {project.imageName}</span>
+                {/* PLACEHOLDER TEXT REMOVED SO IT DOESN'T BLOCK YOUR IMAGES */}
                 <Image src={`/${project.imageName}`} alt={project.client} fill className="object-cover object-top" />
               </div>
               <div className="p-6 sm:p-8">
