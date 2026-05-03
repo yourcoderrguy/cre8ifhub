@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Team() {
   const founder = {
-    name: "Tiamiyu Waliu Wiliams", 
+    name: "Tiamiyu Wasiu Wiliams", 
     role: "Founder & Operations Lead",
     bio: "Driving the strategic vision and operational excellence at Cre8ifhub. Specializing in cross-functional team leadership, project discovery, and ensuring that every platform we launch is optimized for massive user engagement and clear monetization.",
     icon: <Layers className="w-5 h-5 text-yellow-500" />,
