@@ -50,31 +50,31 @@ export default function Work() {
       client: "ShowCase",
       title: "Clarity, Conversion, and First Impressions",
       desc: "Designed a high-performance landing experience on Sharetribe Flex built strictly for conversion—because the first click determines everything that follows.",
-      imageName: "showcase.jpg"
+      imageName: "conceirge.png"
     },
     {
       client: "Luminate",
       title: "Extending Beyond the Default Stack",
       desc: "Combined Sharetribe Flex with a custom PHP/Laravel backend to unlock multi-payment support (PayPal) and complex business logic. Where no-code meets engineering precision.",
-      imageName: "luminate.jpg"
+      imageName: "conceirge.png"
     },
     {
       client: "BuyBackBoards",
       title: "Solving Logistics Inside the Transaction",
       desc: "Embedded complex shipping calculation logic directly into a Sharetribe Flex purchase flow, removing uncertainty and reducing buyer friction instantly.",
-      imageName: "buybackboards.jpg"
+      imageName: "conceirge.png"
     },
     {
       client: "Influence Finder",
       title: "Powering Brand & Creator Partnerships",
       desc: "Implemented a commission-based system with Stripe split payments connecting Amazon sellers with influencers, ensuring both sides collaborate confidently.",
-      imageName: "influencefinder.jpg"
+      imageName: "conceirge.png"
     },
     {
       client: "MedicalMentors",
       title: "Real-Time Interaction Marketplace",
       desc: "Integrated Whereby video seamlessly into the platform, enabling live consultations alongside structured booking flows for meaningful medical mentorship.",
-      imageName: "medicalmentors.jpg"
+      imageName: "conceirge.png"
     }
   ];
 
